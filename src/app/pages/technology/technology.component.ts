@@ -5,8 +5,7 @@ import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-technology',
-  templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.css']
+  templateUrl: './technology.component.html'
 })
 export class TechnologyComponent implements OnInit {
   public technology: Technology = {
@@ -18,7 +17,7 @@ export class TechnologyComponent implements OnInit {
     updatedAt: new Date(),
     createdAt: new Date()
   };
-  constructor(private _activatedRoute: ActivatedRoute, private _httpService: HttpService) { }
+  constructor(private _activatedRoute: ActivatedRoute, private _httpService: HttpService) {}
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe(params => {

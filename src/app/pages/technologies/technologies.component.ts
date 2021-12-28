@@ -4,13 +4,12 @@ import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-technologies',
-  templateUrl: './technologies.component.html',
-  styleUrls: ['./technologies.component.css']
+  templateUrl: './technologies.component.html'
 })
 export class TechnologiesComponent implements OnInit {
   public technologies: Technology[] | undefined;
 
-  constructor(public _httpService: HttpService) { }
+  constructor(public _httpService: HttpService) {}
 
   ngOnInit(): void {
     this._httpService.getTechnologies().subscribe((technologies: Technology[] | any) => {
