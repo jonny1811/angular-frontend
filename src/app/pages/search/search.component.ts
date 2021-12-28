@@ -5,8 +5,7 @@ import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
 
@@ -16,7 +15,7 @@ export class SearchComponent implements OnInit {
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _httpService: HttpService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe(params => {
